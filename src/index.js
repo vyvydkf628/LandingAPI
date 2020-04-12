@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from 'react-dom'
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import Header from './components/header';
+import { Switch, Route } from "react-router-dom";
+import MaskDetection from "./components/maskdetection"
+class App extends React.Component{
+    render(){
+        return (<>
+        <BrowserRouter>
+        {/* <HeaderS /> */}
+        <Header />
+            {/* <Route path="/" exact={false}  component={MaskDetection} /> */}
+            <Switch>
+            <Route path="/maskdetection" exact={true} component={MaskDetection} />
+            {/* <Route path="/smartContract"component={SmartContract} /> */}
+            </Switch>
+
+        </BrowserRouter>
+        {/* <Footer/> */}
+        </>)
+    }
+}
+
+ReactDOM.render(<App />, document.querySelector('#root'));
