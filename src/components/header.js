@@ -15,7 +15,7 @@ class Header extends React.Component{
     render(){
         return (<>
             <Navbar collapseOnSelect expand="lg" variant="dark" style={{background: "#4B0082"}}>
-            <Navbar.Brand href="#home">Ayden</Navbar.Brand>
+            <Navbar.Brand href="#home">Ainize</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
